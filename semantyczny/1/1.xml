@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<sklep>
+<name> Sklep RTV </name>
+<category>
+	Sprzet RTV:
+	<product id="1"> 
+		<nazwa> Komputer </nazwa>
+		<cena> 1200zł </cena>
+	</product>
+	<product id="2"> 
+		<nazwa> Monitor </nazwa>
+		<cena> 500zł </cena>
+ 	</product>
+	<product id="3"> 
+		<nazwa> Telewizor </nazwa>
+		<cena> 2500zł </cena> 
+	</product>
+	<product id="4"> 
+		<nazwa> Klawiatura </nazwa>
+		<cena> 300zł </cena> 
+	</product>
+	<product id="5"> 
+		<nazwa> Głośniki </nazwa>
+		<cena> 200zł </cena> 
+	</product>
+</category>
+</sklep>
+

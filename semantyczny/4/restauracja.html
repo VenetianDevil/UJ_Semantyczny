@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>restauracja</title>
+</head>
+<body>
+	<ul id="Menu"><b>Menu</b></ul>
+	<script lanuage="JavaScript">
+		var dania = ["Dziczyczna", "Zupa Pomidorowa", "Kasza", "Nalesniki z serem", "Lody Czekoladowe"]
+		var cena = [13.90, 9.50, 12, 10.80, 17]
+		var ilosc = [5, 10, 8, 15, 9]
+		
+		function za_wszystkie_porcje(cena, ilosc, dania)
+		{
+			if(dania.length != cena.length || dania.length!= ilosc.length)
+				alert("blad danych")
+			var dorobek = []
+			for(var i=0; i<dania.length; i++){
+				dorobek[i] = cena[i] * ilosc[i]
+			}
+			return dorobek
+		}
+
+		var dorobek = za_wszystkie_porcje(cena, ilosc, dania)
+		
+		var ol = document.getElementById('Menu')
+		for(var j=0; j<dania.length; j++){
+			var li = document.createElement('li')
+			li.textContent = dania[j] + "\t" + cena[j] + "zł\t" +  ilosc[j] + "szt.\t= " + dorobek[j] + "zł";
+			ol.appendChild(li)
+		}		
+	</script>
+</body>
+
+</html>
