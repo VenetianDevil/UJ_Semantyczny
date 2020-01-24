@@ -1,0 +1,44 @@
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:foaf="http://xmlns.com/foaf/0.1"
+xmlns:rel="http://stona.www.com/schemas/pl"
+
+friendOf
+
+<foaf:Person rdf:ID="osoba1">
+	<foaf:name> Jan Kowalski
+	<rel:friendOf rdf:resource="#osoba2"/>
+</foaf:Person>
+<foaf:Person rdf:ID="osoba2">
+	<foaf:name> Jan Kowalski
+	<rel:friendOf rdf:resource="#osoba1"/>
+</foaf:Person>
+</rdf:RDF>
+
+dobra jest połaczyć na krzyż, ale nie trzeba
+
+validator: http://www.org.... Validator
+
+knows
+
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<foaf:Person rdf:nodeID="ktos">
+	<foaf:name> Jan Kowalski
+	<rel:seeAlso rdf:resource="http...."/>
+</foaf:Person>
+
+<foaf:Person>
+	<foaf:name> Jan Kowalski
+	<foaf:knows rdf:nodeID="ktos"/>
+	<foaf:knows>
+		<foaf:Person>
+			<foaf:name>Anna kowalsak</foaf:name> //zdefiniowana przy nim wiec ją zna
+.
+.
+.
+.
+
+e-mail:
+
+
+

@@ -1,0 +1,47 @@
+1. 100 największych miast na świecie
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?miasto ?wielkosc WHERE{
+?miasto a dbo:City.
+?miasto dbo:areaMetro ?wielkosc.
+}
+
+ORDER BY DESC (?wielkosc)
+limit 100
+
+2. 10 najdłuższych rzek na świecie
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?rzeka ?dlugosc WHERE{
+?rzeka a dbo:NaturalPlace.
+?rzeka dbp:length ?dlugosc.
+}
+
+ORDER BY DESC (?dlugosc)
+OFFSET 10
+limit 10
+
+
+3. Pięć drrugich najdłuższych rzek w Azji
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?rzeka ?miejsce ?dlugosc WHERE{
+?rzeka a dbo:NaturalPlace.
+?rzeka dbp:length ?dlugosc.
+?rzeka dct:subject ?miejsce.
+FILTER (regex(?miejsce, "Asia")) 
+}
+
+ORDER BY DESC (?dlugosc)
+OFFSET 5
+limit 5
+
+
+4. Państwa których ludność > 15mln
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?kraj ?populacja WHERE{
+?kraj a dbo:PopulatedPlace.
+?kraj dbo:populationTotal ?populacja.
+FILTER ( ?populacja > 15000000)
+}
