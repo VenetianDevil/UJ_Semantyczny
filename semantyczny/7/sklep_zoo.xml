@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<owl:Class rdf:ID="produkt"/>
+
+	<owl:Class rdf:ID="Akcesoria">
+		<rdfs:subClassOf rdf:resource="#produkt"/>
+		<owl:disjointWith rdf:resource="#Zwierzeta"/>
+	</owl:Class>
+
+	<owl:Class rdf:ID="Zwierzeta">
+		<rdfs:subClassOf rdf:resource="#ptodukt"/>
+		<owl:disjointWith rdf:resource="#Akcesoria"/>
+	</owl:Class>
+
+	<owl:Class rdf:ID="Gryzonie">
+		<rdfs:comment>Rodzaj zwierzat: Gryzonie</rdfs:comment>
+		<rdfs:domain rdf:resource="/gryzonie"/>
+		<rdfs:subClassOf rdf:resource="#Zwierzeta"/>
+	</owl:Class>
+
+	<owl:Class rdf:resource="Na_sprzedaz">
+		<rdfs:comment>Wszystko co dostepne w sklepie</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="#Zwierzeta"/>		
+		<rdfs:subClassOf rdf:resource="#Akcesoria"/>
+		<owl:Restriction owl:minCardinality="1">		
+			<owl:onProperty rdf:resource="#dostepny"/>
+		</owl:Restriction>
+	</owl:Class>
+
+	<owl:ObjectProperty rdf:ID="dostepny">
+		<rdfs:domain rdf:resource="#Sklep"/>
+		<rdfs:range rdfs:resource="#produkt"/>
+	</owl:ObjectProperty>
+</rdf:RDF>

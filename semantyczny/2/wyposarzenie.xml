@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wyposarzenie[
+<!ELEMENT wyposarzenie (pomieszczenie+)>
+<!ELEMENT pomieszczenie (przedmiot+)>
+<!ELEMENT przedmiot (#PCDATA)>
+<!ATTLIST pomieszczenie typ CDATA #REQUIRED>
+<!ATTLIST przedmiot ilosc CDATA #IMPLIED>
+]>
+<wyposarzenie>
+	<pomieszczenie typ="budynek">
+		<przedmiot ilosc="9">okna</przedmiot>
+		<przedmiot ilosc="3">drzwi wejsciowe</przedmiot>
+	</pomieszczenie>
+	<pomieszczenie typ="korytarz">
+		<przedmiot ilosc="30">zdjecia</przedmiot>
+		<przedmiot>rosliny doniczkowe</przedmiot>
+	</pomieszczenie>
+	<pomieszczenie typ="pokoj">
+		<przedmiot ilosc="100">krzesła</przedmiot>
+		<przedmiot>stoly</przedmiot>
+		<przedmiot ilosc="28">komputery</przedmiot>
+	</pomieszczenie>
+	<pomieszczenie typ="piwnica">
+		<przedmiot ilosc="2">regaly</przedmiot>
+		<przedmiot ilosc="27">pudla</przedmiot>
+	</pomieszczenie>
+</wyposarzenie>
+<!--http://xmlvalidator.new-studio.org/-->

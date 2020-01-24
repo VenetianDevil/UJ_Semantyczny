@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:foaf="http://xmlns.com/foaf/0.1"
+xmlns:rel="http://stona.www.com/schemas/pl"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	<foaf:Group>
+		<foaf:name> Dynastia Kowalskich </foaf:name>
+		<foaf:member>
+			<foaf:Person rdf:nodeID="Krol_K">
+				<foaf:name> Jan Kowalski </foaf:name>
+				<foaf:mbox_sha1sum>5d05cd897b9fb4b4c9846ed5cbe0cb986c5eb2f</foaf:mbox_sha1sum>
+				<rel:parentOf rdf:resource="#corka1"/>
+				<foaf:knows rdf:nodeID="Krol_N"/>
+			</foaf:Person>
+		</foaf:member>
+		<foaf:member>
+			<foaf:Person rdf:ID="Krolowa_Kowalska">
+				<foaf:name> Anna Kowalska </foaf:name>
+				<foaf:mbox_sha1sum>5d05cd278b9fb4b4c9846ed5cbe0cb986c5eb2f</foaf:mbox_sha1sum>
+				<rel:parentOf rdf:resource="#corka1"/>
+				<foaf:knows>
+					<foaf:Person rdf:nodeID="sasiad_K">
+						<foaf:name>Jagoda Palacz</foaf:name>
+					</foaf:Person>
+				</foaf:knows>
+			</foaf:Person>
+		</foaf:member>
+		<foaf:member>
+			<foaf:Person rdf:nodeID="corka1">
+				<foaf:name> Amanda Kowalska </foaf:name>
+				<foaf:mbox_sha1sum>5d05cd278b9fb4b4c9846ed5cbe0cb027c5eb2f</foaf:mbox_sha1sum>
+				<rel:childOf rdf:resource="#Krol_K"/>
+				<rel:childOf rdf:resource="#Krolowa_Kowalska"/  >	
+				<foaf:knows rdf:nodeID="syn1"/>		
+			</foaf:Person>
+		</foaf:member>
+	</foaf:Group>
+	<foaf:Group>
+		<foaf:name> Dynastia Nowakow </foaf:name>
+		<foaf:member>
+			<foaf:Person rdf:nodeID="Krol_N">
+				<foaf:name> Jan Nowak </foaf:name>
+				<foaf:mbox_sha1sum>7shacd897b9fb4b4c9846ed5cbe0cb986c5eb2f</foaf:mbox_sha1sum>
+				<rel:parentOf rdf:resource="#syn1"/>
+				<foaf:knows rdf:nodeID="Krol_K"/>
+			</foaf:Person>
+		</foaf:member>
+		<foaf:member>
+			<foaf:Person rdf:ID="Krolowa_Nowak">
+				<foaf:name> Anna Nowak </foaf:name>
+				<foaf:mbox_sha1sum>5d05ks958b9fb4b4c9846ed5cbe0cb986c5eb2f</foaf:mbox_sha1sum>
+				<rel:parentOf rdf:resource="#syn1"/>
+			</foaf:Person>
+		</foaf:member>
+		<foaf:member>
+			<foaf:Person rdf:nodeID="syn1">
+				<foaf:name> Patryk Nowak </foaf:name>
+				<foaf:mbox_sha1sum>5d00an378b9fb4b4c9846ed5cbe0cb027c5eb2f</foaf:mbox_sha1sum>
+				<rel:childOf rdf:resource="#Krol_N"/>
+				<rel:childOf rdf:resource="#Krolowa_Nowak"/>
+				<foaf:knows rdf:nodeID="corka1"/>
+				<rel:descendantOf rdf:resource="http://descendants.com/Kazimierz_Nowakowski"/>		
+			</foaf:Person>
+		</foaf:member>
+	</foaf:Group>
+</rdf:RDF>
+
+<!--https://vocab.org/relationship/
+https://www.w3.org/RDF/Validator/rdfval-->

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lotnisko[
+<!ELEMENT lotnisko (lot+)>
+<!ATTLIST lot typ CDATA #IMPLIED>
+<!ELEMENT lot (data, trasa, samolot, zaloga, biuro?)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT trasa (miasto+)>
+<!ELEMENT miasto (#PCDATA)>
+<!ATTLIST miasto boarding (tak|nie) "nie">
+<!ELEMENT samolot EMPTY>
+<!ATTLIST samolot id ID #REQUIRED>
+<!ELEMENT zaloga (pilot, pierwszy_oficer , steward*, technik+)>
+<!ELEMENT pilot EMPTY>
+<!ELEMENT pierwszy_oficer EMPTY>
+<!ELEMENT steward EMPTY>
+<!ELEMENT technik EMPTY>
+<!ATTLIST pilot
+	imie CDATA #REQUIRED
+	nazwisko CDATA #REQUIRED
+	id ID #REQUIRED>	
+<!ATTLIST pierwszy_oficer 
+	imie CDATA #REQUIRED
+	nazwisko CDATA #REQUIRED
+	id ID #REQUIRED>
+<!ATTLIST steward
+	imie CDATA #REQUIRED
+	nazwisko CDATA #REQUIRED
+	id ID #REQUIRED>
+<!ATTLIST technik
+	imie CDATA #REQUIRED
+	nazwisko CDATA #REQUIRED
+	id ID #REQUIRED>
+<!ELEMENT biuro EMPTY>
+<!ATTLIST biuro
+	nazwa CDATA #REQUIRED
+	kontakt CDATA #REQUIRED>
+]>
+<lotnisko>
+	<lot typ="wycieczkowy">
+		<data>6.02.2020</data>
+		<trasa>
+			<miasto boarding="tak">Warszawa</miasto>
+			<miasto boarding="tak">Berlin</miasto>
+			<miasto boarding="nie">Luxemburg</miasto>
+		</trasa>
+		<samolot id="BOING138"/>
+		<zaloga>
+			<pilot imie="Jan" nazwisko="Kowalski" id="t3194704"/>
+			<pierwszy_oficer imie="Borys" nazwisko="Nowak" id="c382462"/>
+			<steward imie="Joanna" nazwisko="Muzaj" id="w384102"/>
+			<steward imie="Krzysztof" nazwisko="Nowak" id="m2031802"/>
+			<technik imie="Janusz" nazwisko="Lekko" id="r244615"/>			
+		</zaloga>
+		<biuro nazwa="ITAKA" kontakt="978637927"/>
+	</lot>
+
+	<lot typ="ladunkowy">
+		<data>20.07.2020</data>
+		<trasa>
+			<miasto boarding="nie">Kraków</miasto>
+			<miasto boarding="nie">Warszawa</miasto>
+		</trasa>
+		<samolot id="AEG-G93"/>
+		<zaloga>
+			<pilot imie="Jan" nazwisko="Benedykt" id="dp37011"/>
+			<pierwszy_oficer imie="Waldemar" nazwisko="Brodek" id="a967201"/>
+			<technik imie="Paweł" nazwisko="Luka" id="ad21341"/>
+		</zaloga>	
+	</lot>
+</lotnisko>
+

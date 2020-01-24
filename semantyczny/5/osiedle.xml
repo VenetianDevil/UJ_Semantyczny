@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:osiedle="http://www.osiedle.fake/osiedle#">
+	<rdf:Description rdf:about="http://www.osiedle.fake/osiedle/sklepy">
+		<osiedle:sklepy>
+			<rdf:Bag>
+				<rdf:li>Żabka</rdf:li>
+				<rdf:li>Czerwone Jabuszko</rdf:li>
+				<rdf:li>RTV i AGD</rdf:li>
+				<rdf:li>BIO żywność</rdf:li>
+				<rdf:li>Wszystko dla zwierzaków</rdf:li>
+			</rdf:Bag>
+		</osiedle:sklepy>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.osiedle.fake/osiedle/budynki_mieszkalne">
+		<osiedle:mieszkania>
+			<rdf:Bag>
+				<rdf:li>Blok 20</rdf:li>
+				<rdf:li>Blok 22</rdf:li>
+				<rdf:li>Blok 24</rdf:li>
+				<rdf:li>Blok 25</rdf:li>
+			</rdf:Bag>
+		</osiedle:mieszkania>	
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.osiedle.fake/osiedle/uslugi">
+		<osiedle:uslugi>
+			<rdf:Bag>
+				<rdf:li>Kowal</rdf:li>
+				<rdf:li>Krawcowa</rdf:li>
+				<rdf:li>Szybka naprawa sprzetu elektronicznego</rdf:li>
+				<rdf:li>Serwis Rowerowy</rdf:li>
+			</rdf:Bag>
+		</osiedle:uslugi>	
+	</rdf:Description>
+</rdf:RDF>
+
+<!-- https://www.w3.org/RDF/Validator/rdfval -->
